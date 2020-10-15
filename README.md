@@ -29,6 +29,11 @@
 - Android Studio 4.0.1
 <br></br>
 
+## 첨부된 실행 화면
+---
+-Pixel 2 API 30
+<br></br>
+
 ## 코드 관련 설명
 ---
 ### xml
