@@ -41,7 +41,7 @@ Intent intent = new Intent(MainActivity.this, CartActivity.class);
 intent.putExtra("hashMap", hashMap);
 startActivity(intent);
 ~~~
-- 두번째 화면에서 전달받은 HashMap에서 원하는 상품의 정보를 세번째 화면으로 전달할 때는 String 배열에 각각 넣어 사용
+- 두번째 화면에서 전달받은 HashMap에서 원하는 상품의 정보를 세번째 화면으로 전달할 때는 String 배열에 각각 넣어 
 ~~~java
 final Intent intent = getIntent();
 final HashMap<String, String> hashMap = (HashMap<String, String>)intent.getSerializableExtra("hashMap");
