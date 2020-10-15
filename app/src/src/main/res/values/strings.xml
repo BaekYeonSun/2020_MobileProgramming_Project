@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">연선반점</string>
+    <string name="menu1">짜장면</string>
+    <string name="menu2">짬뽕</string>
+    <string name="menu3">탕수육</string>
+    <string name="price1">4000</string>
+    <string name="price2">5000</string>
+    <string name="price3">6000</string>
+    <string name="choice">선택</string>
+    <string name="phone">연락처</string>
+    <string name="hint_phone">연락처를 입력해주세요.</string>
+    <string name="address">주소</string>
+    <string name="hint_address">주소를 입력해주세요.</string>
+    <string name="yes">확인</string>
+    <string name="no">취소</string>
+    <string name="purchase">구매하기</string>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/food1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/food2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/food3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imageView"
+        android:layout_toRightOf="@id/imageView"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/menu1"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/imageView2"
+        android:layout_alignTop="@id/imageView2"
+        android:layout_toRightOf="@id/imageView2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/menu2"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imageView3"
+        android:layout_toRightOf="@id/imageView3"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/menu3"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/cb_food1"
+        android:label="@string/menu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_toRightOf="@id/imageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/price1"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/cb_food2"
+        android:label="@string/menu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_toRightOf="@id/imageView2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/price2"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/cb_food3"
+        android:label="@string/menu3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_toRightOf="@id/imageView3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/price3"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/b_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="40dp"
+        android:text="장바구니"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/b_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/b_cart"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="구매하기"
+        android:textSize="30sp"/>
+
+</RelativeLayout>
