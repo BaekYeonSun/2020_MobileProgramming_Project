@@ -36,11 +36,17 @@
 ### Java
 - 현재 화면에서 다음 화면으로 이동(첫번째 화면 → 두번째 화면 또는 두번째 화면 → 세번째 화면)할 때 선택한 상품의 정보(메뉴, 가격)를 전달하기 위해 HashMao<String, String> 이용(key값: 메뉴, value값: 가격)
 - 화면 전환하고 화면간의 데이터를 전달할 때는 Intent 이용(데이터를 보내는 메서드: putExtra(), 전페이지에서 보낸 값을 받아오는 메서드: getExtra())
+~~~java
+Intent intent = new Intent(MainActivity.this, CartActivity.class);
+intent.putExtra("hashMap", hashMap);
+startActivity(intent);
+~~~
 - 두번째 화면에서 전달받은 HashMap에서 원하는 상품의 정보를 세번째 화면으로 전달할 때는 String 배열에 각각 넣어 사용
 ~~~java
 final Intent intent = getIntent();
 final HashMap<String, String> hashMap = (HashMap<String, String>)intent.getSerializableExtra("hashMap");
 final String[] menu = new String[3]; final String[] price = new String[3];
+
 Set<Map.Entry<String, String>>set = hashMap.entrySet();
 Iterator<Map.Entry<String, String>>itr = set.iterator();
 int i = 0;
@@ -51,4 +57,6 @@ while(itr.hasNext()){
     checkBoxes[i].setVisibility(View.VISIBLE);
     i++;
 }
+~~~
+-
 <br></br>
