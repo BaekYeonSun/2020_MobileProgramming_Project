@@ -58,5 +58,41 @@ while(itr.hasNext()){
     i++;
 }
 ~~~
--
+- 총 합계를 구하기 위해 String 타입인 HashMap의 value들을 Integer 타입으로 바꿔서 계산
+~~~java
+sum += Integer.valueOf(entry.getValue()); //총 합계
+~~~
+- 연락처 또는 주소를 입력하지 않았을 경우에는 버튼(구매하기) 클릭하지 못하도록 하고, Toast message와 requestFocus()로 입력 유도함
+~~~java
+if(ed_phone.getText().toString().length() == 0){
+    Toast.makeText(BuyActivity.this, "연락처를 입력하세요.", Toast.LENGTH_SHORT).show();
+    ed_phone.requestFocus();
+}
+else if(ed_address.getText().toString().length() == 0){
+    Toast.makeText(BuyActivity.this, "주소를 입력하세요.", Toast.LENGTH_SHORT).show();
+    ed_address.requestFocus();
+}
+~~~
+- 결제할 총합을 한 번 더 알려주고 버튼(확인 또는 취소) 클릭(확인 버튼 클릭하면 구매 완료 메세지 띄우고 첫번째 화면으로 이동, 취소 버튼 클릭하면 취소 메세지 띄우기)
+~~~java
+new AlertDialog.Builder(BuyActivity.this)
+        .setTitle("결제를 진행하시겠습니까?")
+        .setMessage("총 결제 금액은 " + finalResult + "원입니다.")
+        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener(){
+             @Override
+             public void onClick(DialogInterface dialog, int which){
+                 Toast.makeText(BuyActivity.this, "구매를 완료하였습니다.", Toast.LENGTH_SHORT).show();
+                 Intent intent = new Intent(BuyActivity.this, MainActivity.class);
+                 startActivity(intent);
+             }
+         })
+         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+             @Override
+             public void onClick(DialogInterface dialog, int which) {
+                 Toast.makeText(BuyActivity.this, "취소하였습니다.", Toast.LENGTH_SHORT).show();
+             }
+         })
+         .show();
+~~~
+
 <br></br>
