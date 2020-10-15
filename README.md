@@ -99,6 +99,7 @@ new AlertDialog.Builder(BuyActivity.this)
 
 - Firebase 연동
 <div>
-  <img src="https://user-images.githubusercontent.com/55418359/96168081-388ae780-0f5b-11eb-8397-c92d9cb07956.PNG" width="250">
+  <img src="https://user-images.githubusercontent.com/55418359/96168081-388ae780-0f5b-11eb-8397-c92d9cb07956.PNG">
+  <img src="https://user-images.githubusercontent.com/55418359/96173762-52302d00-0f63-11eb-9933-ec34b036a6cc.PNG">
 </div>
 <br></br>
