@@ -10,6 +10,11 @@
   <img src="https://user-images.githubusercontent.com/55418359/96143547-28184400-0f3e-11eb-82b8-d89d328ac82b.PNG" width="250">
 </div>
 
+#### 첨부된 실행 화면
+---
+- Pixel 2 API 30
+<br></br>
+
 ## 설명
 ---
 - 첫번째 화면(상품 선택 페이지)에서 상품(짜장면, 짬뽕, 탕수육)의 정보(메뉴, 가격)를 보고 원하는 상품을 선택한 후 버튼(장바구니 또는 구매하기) 클릭하여 화면 이동
@@ -27,11 +32,6 @@
 ---
 - Window OS
 - Android Studio 4.0.1
-<br></br>
-
-## 첨부된 실행 화면
----
--Pixel 2 API 30
 <br></br>
 
 ## 코드 관련 설명
