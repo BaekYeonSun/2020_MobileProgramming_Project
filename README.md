@@ -10,7 +10,7 @@
   <img src="https://user-images.githubusercontent.com/55418359/96143547-28184400-0f3e-11eb-82b8-d89d328ac82b.PNG" width="250">
 </div>
 
-#### 첨부된 실행 화면
+#### Android Virtual Device
 ---
 - Pixel 2 API 30
 <br></br>
