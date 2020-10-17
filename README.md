@@ -109,7 +109,52 @@ new AlertDialog.Builder(BuyActivity.this)
 private DatabaseReference mDatabase;
 mDatabase = FirebaseDatabase.getInstance().getReference();
 ~~~
-- 
+- 데이터를 추가하거나 조회하기 위한 클래스 생성(User.java)
+~~~java
+@IgnoreExtraProperties
+public class User {
+    public String phonenumber;
+    public String address;
+    public String menu;
+
+    public User() {
+        this.phonenumber = "";
+        this.address = "";
+        this.menu = "";
+    }
+
+    public User(String phonenumber, String address, String menu) {
+        this.phonenumber = phonenumber;
+        this.address = address;
+        this.menu = menu;
+    }
+
+    public String getPhonenumber() { return phonenumber; }
+    public void setPhonenumber(String phonenumber) { this.phonenumber = phonenumber; }
+    public String getAddress() { return address; }
+    public void setAddress(String address) { this.address = address; }
+    public String getMenu() { return menu; }
+    public void setMenu(String menu) { this.menu = menu; }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "phone-number='" + phonenumber + '\'' +
+                ", address='" + address + '\'' +
+                ", menu='" + menu + '\'' +
+                '}';
+    }
+}
+~~~
+- 데이터 전달할 때 연략처(결제를 하기 위해 필수로 입력해야 함)를 사용하여 userId 구분 후 데이터 추가
+~~~java
+final EditText ed_phone = (EditText) findViewById(R.id.phone);
+
+String getPhone = ed_phone.getText().toString();
+String userId = getPhone;
+
+writeNewUser(userId, getPhone, getAddress, getMenu);
+~~~
 <br></br>
 
 ## Firebase 연동
