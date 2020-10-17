@@ -100,7 +100,7 @@ new AlertDialog.Builder(BuyActivity.this)
          })
          .show();
 ~~~
-<br></br>
+---
 - firebase에 접근하기 위해 AndroidManifest.xml에 인터넷 권한 허용
 ~~~
 <uses-permission android:name="android.permission.INTERNET" />
@@ -147,7 +147,7 @@ public class User {
     }
 }
 ~~~
-- 데이터 전달할 때 연략처(결제를 하기 위해 필수로 입력해야 함)를 사용하여 userId 구분 후 데이터 추가
+- 데이터 전달할 때 연략처(결제를 하기 위해 필수로 입력해야 함)를 사용하여 userId 구분 후 데이터 추가 함수 호출
 ~~~java
 final EditText ed_phone = (EditText) findViewById(R.id.phone);
 
@@ -155,6 +155,28 @@ String getPhone = ed_phone.getText().toString();
 String userId = getPhone;
 
 writeNewUser(userId, getPhone, getAddress, getMenu);
+~~~
+- 데이터를 추가하기 위한 함수
+~~~java
+private void writeNewUser(String userId, String phonenumber, String address, String menu) {
+    User user = new User(phonenumber, address, menu);
+
+    mDatabase.child("users").child(userId).setValue(user)
+            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                                Toast.makeText(BuyActivity.this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Write failed
+                                Toast.makeText(BuyActivity.this, "저장을 실패했습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+            }
 ~~~
 <br></br>
 
