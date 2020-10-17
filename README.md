@@ -100,6 +100,7 @@ new AlertDialog.Builder(BuyActivity.this)
          })
          .show();
 ~~~
+<br></br>
 - firebase에 접근하기 위해 AndroidManifest.xml에 인터넷 권한 허용
 ~~~
 <uses-permission android:name="android.permission.INTERNET" />
