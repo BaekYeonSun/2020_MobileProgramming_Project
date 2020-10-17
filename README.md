@@ -102,6 +102,7 @@ new AlertDialog.Builder(BuyActivity.this)
 ~~~
 <br></br>
 ## 추가구현 → Firebase 연동
+---
 <div>
   <img src="https://user-images.githubusercontent.com/55418359/96168081-388ae780-0f5b-11eb-8397-c92d9cb07956.PNG">
   <img src="https://user-images.githubusercontent.com/55418359/96173762-52302d00-0f63-11eb-9933-ec34b036a6cc.PNG">
@@ -109,6 +110,7 @@ new AlertDialog.Builder(BuyActivity.this)
   <img src="https://user-images.githubusercontent.com/55418359/96337201-21b1d580-10c0-11eb-9db8-02d76800936b.PNG">
   <img src="https://user-images.githubusercontent.com/55418359/96337202-22e30280-10c0-11eb-86b4-699edba1e7d6.PNG">
 </div>
+
 <br></br>
 ---
 ### xml
@@ -118,7 +120,7 @@ new AlertDialog.Builder(BuyActivity.this)
 ~~~
 ### Java
 - firebase에서 데이터를 추가하거나 조회하기 위해 DatabaseReferene의 인스턴스 선언
-~~~
+~~~java
 private DatabaseReference mDatabase;
 mDatabase = FirebaseDatabase.getInstance().getReference();
 ~~~
