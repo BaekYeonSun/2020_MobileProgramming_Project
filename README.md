@@ -68,7 +68,7 @@ while(itr.hasNext()){
 ~~~java
 sum += Integer.valueOf(entry.getValue()); //총 합계
 ~~~
-- 연락처 또는 주소를 입력하지 않았을 경우에는 버튼(구매하기) 클릭하지 못하도록 하고, Toast message와 requestFocus()로 입력 유도함
+- 연락처 또는 주소를 입력하지 않았을 경우에는 버튼(구매하기) 클릭해도 구매하지 못하도록 하고(화면 전환 불가), Toast message와 requestFocus()로 입력 유도함
 ~~~java
 if(ed_phone.getText().toString().length() == 0){
     Toast.makeText(BuyActivity.this, "연락처를 입력하세요.", Toast.LENGTH_SHORT).show();
@@ -161,7 +161,7 @@ public class User {
     }
 }
 ~~~
-- 데이터 전달할 때 연략처(결제를 하기 위해 필수로 입력해야 함)를 사용하여 userId 구분 후 데이터 추가 함수 호출
+- 데이터 추가 함수 호출(데이터 전달할 때 연락처를 사용하여 userId 구분함)
 ~~~java
 final EditText ed_phone = (EditText) findViewById(R.id.phone);
 
@@ -179,17 +179,15 @@ private void writeNewUser(String userId, String phonenumber, String address, Str
             .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
-                                Toast.makeText(BuyActivity.this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                // Write failed
-                                Toast.makeText(BuyActivity.this, "저장을 실패했습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-            }
+                    Toast.makeText(BuyActivity.this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show();
+                }
+            })
+            .addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(BuyActivity.this, "저장을 실패했습니다.", Toast.LENGTH_SHORT).show();
+                }
+            });
+}
 ~~~
 <br></br>
