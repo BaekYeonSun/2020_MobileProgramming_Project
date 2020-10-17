@@ -100,9 +100,7 @@ new AlertDialog.Builder(BuyActivity.this)
          })
          .show();
 ~~~
-
 <br></br>
----
 ## 추가구현 → Firebase 연동
 ---
 <div>
@@ -113,7 +111,6 @@ new AlertDialog.Builder(BuyActivity.this)
   <img src="https://user-images.githubusercontent.com/55418359/96337202-22e30280-10c0-11eb-86b4-699edba1e7d6.PNG">
 </div>
 <br></br>
-
 ### xml
 - firebase에 접근하기 위해 AndroidManifest.xml에 인터넷 권한 허용
 ~~~
