@@ -37,6 +37,7 @@
 ## 코드 관련 설명
 ---
 ### xml
+##### activity_main.xml, activity_cart.xml, activity_buy.xml
 - Relative Layout(첫번째 화면), Linear Layout(두번째 화면), Table Layout(세번째 화면) 사용
 ### Java
 ##### MainActivity.java, CartActivity.java, BuyActivity.java, User.java
