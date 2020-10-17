@@ -39,6 +39,7 @@
 ### xml
 - Relative Layout(첫번째 화면), Linear Layout(두번째 화면), Table Layout(세번째 화면) 사용
 ### Java
+##### MainActivity.java, CartActivity.java, BuyActivity.java, User.java
 - 현재 화면에서 다음 화면으로 이동(첫번째 화면 → 두번째 화면 또는 두번째 화면 → 세번째 화면)할 때 선택한 상품의 정보(메뉴, 가격)를 전달하기 위해 HashMao<String, String> 이용(key값: 메뉴, value값: 가격)
 - 화면 전환하고 화면간의 데이터를 전달할 때는 Intent 이용(데이터를 보내는 메서드: putExtra(), 전페이지에서 보낸 값을 받아오는 메서드: getExtra())
 ~~~java
@@ -99,7 +100,16 @@ new AlertDialog.Builder(BuyActivity.this)
          })
          .show();
 ~~~
-
+- firebase에 접근하기 위해 AndroidManifest.xml에 인터넷 권한 허용
+~~~
+<uses-permission android:name="android.permission.INTERNET" />
+~~~
+- firebase에서 데이터를 추가하거나 조회하기 위해 DatabaseReferene의 인스턴스 선언
+~~~
+private DatabaseReference mDatabase;
+mDatabase = FirebaseDatabase.getInstance().getReference();
+~~~
+- 
 <br></br>
 
 ## Firebase 연동
